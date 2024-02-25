@@ -23,69 +23,47 @@ video {
   width: 100%;
   object-fit: cover;
 }
+
 .section-grid {
+  margin: -4px;
   display: grid;
   grid-template-areas:
     "p1 m1"
     "m2 p2";
+  grid-template-rows: 50vh 50vh;
+  grid-template-columns: 50% 50%;
 }
-/* ------------section 1-------- */
-.section1 {
-  display: flex;
-  margin-top: -4px;
-  justify-content: space-between;
-}
-
 .picture1 {
-  width: 50%;
   grid-area: p1;
 }
-
+.picture1 img {
+  height: 50vh;
+}
 .menu1 {
-  align-self: center;
-  padding: 3em;
-  width: 50%;
   grid-area: m1;
-}
-
-/* yaha mero .description1 h1 {} garda kina h1 target bhayena */
-.menu1 h1 {
-  padding: 5px;
-}
-.menu1 span {
-  border: 2px solid black;
-  padding: 5px 20px;
-  align-self: right;
-  font-weight: bold;
-}
-
-/* ----------section 2-------- */
-
-.section2 {
-  display: flex;
-  justify-content: space-between;
-}
-
-.menu2 {
-  align-self: center;
-  padding: 10px;
-  width: 50%;
-  grid-area: m2;
+  padding: 20px;
 }
 .picture2 {
-  margin-top: -4px;
-  width: 50%;
   grid-area: p2;
 }
-
-.menu2 span {
+.picture2 img {
+  height: 50vh;
+}
+.menu2 {
+  grid-area: m2;
+  padding: 20px;
+}
+.section-grid span {
   border: 2px solid black;
   padding: 5px 20px;
-  align-self: right;
-  font-weight: bold;
 }
-
+.section-grid span:hover {
+  color: white;
+  background: black;
+  cursor: pointer;
+}
 .parallex {
+  margin-top: 4px;
   background: url(./Assets/Parallex.jpg) no-repeat center;
   height: 1080px;
   background-size: cover;
@@ -111,7 +89,7 @@ video {
     "wp wedding wine"
     "atmosphere accom blank";
   grid-template-rows: 48vh 48vh;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 33.34% 33.33% 33.33%;
 }
 
 .content > div {
@@ -209,11 +187,19 @@ video {
   }
 }
 @media (width <600px) {
-  .section1 {
-    flex-direction: column;
+  .content {
+    display: grid;
+    grid-template-areas:
+      "wp wedding "
+      "wine blank"
+      "atmosphere accom ";
+    grid-template-rows: 50vh 50vh 50vh;
+    grid-template-columns: 50% 50%;
   }
-  .picture1 {
-    width: 100%;
-    height: 40vh;
+  .head {
+    font-size: 1.5em;
+  }
+  .disc {
+    font-size: 0.75em;
   }
 }
