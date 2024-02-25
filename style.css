@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.heading {
+  background-color: black;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+}
+.heading span {
+  color: whitesmoke;
+  border: 1px solid;
+  padding: 5px;
+}
+
+video {
+  width: 100%;
+  object-fit: cover;
+  height: 95vh;
+}
+
+/* ------------section 1-------- */
+.section1 {
+  display: flex;
+
+  margin-top: -4px;
+}
+
+.menu1 {
+  align-self: center;
+  /* background-image: url(./Assets/background\ .jpg);
+  width: 100%;
+  height: 100%; */
+  object-fit: cover;
+  padding: 10px;
+}
+
+.menu1 img {
+  background-size: cover;
+  height: 100vh;
+}
+
+/* yaha mero .description1 h1 {} garda kina h1 target bhayena */
+.menu1 h1 {
+  padding: 5px;
+}
+.menu1 span {
+  border: 2px solid black;
+  padding: 5px 20px;
+  align-self: right;
+  font-weight: bold;
+}
+.section2 {
+  display: flex;
+  justify-content: space-between;
+}
+/* ----------section 2-------- */
+
+.menu2 {
+  align-self: center;
+  padding: 10px;
+}
+.picture2 {
+  margin: -4px;
+}
+
+.menu2 span {
+  border: 2px solid black;
+  padding: 5px 20px;
+  align-self: right;
+  font-weight: bold;
+}
+
+.parallex {
+  background: url(./Assets/Parallex.jpg) no-repeat center;
+  height: 1080px;
+  background-size: cover;
+  background-attachment: fixed;
+  color: aliceblue;
+  font-size: 2rem;
+  padding: 1.4rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parallex h3 {
+  background-color: rgba(14, 78, 115, 0.532);
+  padding: 60px 100px;
+  border-radius: 10px;
+}
+
+/* ------events using grid----- */
+
+.content {
+  min-height: 100vh;
+  display: grid;
+
+  grid-template-areas:
+    "wp wedding wine"
+    "atmosphere accom taps";
+}
+
+.winepairing {
+  grid-area: wp;
+  background-image: url(./Assets/Grid/wine\ pairing.jpg);
+
+  background-size: cover;
+  color: white;
+}
+.wedding {
+  grid-area: wedding;
+}
+.wine {
+  grid-area: wine;
+}
+.atmosphere {
+  grid-area: atmosphere;
+}
+.accomodation {
+  grid-area: accom;
+}
+.taps {
+  grid-area: taps;
+}
