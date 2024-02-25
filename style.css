@@ -181,19 +181,36 @@ video {
   text-align: center;
 }
 
-@media (width < 992px) {
+@media (width < 1250px) {
   .hero-section video {
     height: 90vh;
   }
+  .content {
+    display: grid;
+    grid-template-areas:
+      "wp wedding wine"
+      "atmosphere accom blank";
+    grid-template-rows: 60vh 60vh;
+    grid-template-columns: 33.34% 33.33% 33.33%;
+  }
+  .head {
+    font-size: 1.5em;
+  }
+  .disc {
+    font-size: 0.75em;
+  }
 }
 @media (width <600px) {
+  .hero-section video {
+    height: 90vh;
+  }
   .content {
     display: grid;
     grid-template-areas:
       "wp wedding "
       "wine blank"
       "atmosphere accom ";
-    grid-template-rows: 50vh 50vh 50vh;
+    grid-template-rows: 60vh 60vh 60vh;
     grid-template-columns: 50% 50%;
   }
   .head {
