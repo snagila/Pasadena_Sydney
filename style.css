@@ -22,28 +22,30 @@ body {
 video {
   width: 100%;
   object-fit: cover;
-  height: 95vh;
 }
-
+.section-grid {
+  display: grid;
+  grid-template-areas:
+    "p1 m1"
+    "m2 p2";
+}
 /* ------------section 1-------- */
 .section1 {
   display: flex;
-
   margin-top: -4px;
+  justify-content: space-between;
+}
+
+.picture1 {
+  width: 50%;
+  grid-area: p1;
 }
 
 .menu1 {
   align-self: center;
-  /* background-image: url(./Assets/background\ .jpg);
-  width: 100%;
-  height: 100%; */
-  object-fit: cover;
-  padding: 10px;
-}
-
-.menu1 img {
-  background-size: cover;
-  height: 100vh;
+  padding: 3em;
+  width: 50%;
+  grid-area: m1;
 }
 
 /* yaha mero .description1 h1 {} garda kina h1 target bhayena */
@@ -56,18 +58,24 @@ video {
   align-self: right;
   font-weight: bold;
 }
+
+/* ----------section 2-------- */
+
 .section2 {
   display: flex;
   justify-content: space-between;
 }
-/* ----------section 2-------- */
 
 .menu2 {
   align-self: center;
   padding: 10px;
+  width: 50%;
+  grid-area: m2;
 }
 .picture2 {
-  margin: -4px;
+  margin-top: -4px;
+  width: 50%;
+  grid-area: p2;
 }
 
 .menu2 span {
@@ -98,33 +106,114 @@ video {
 /* ------events using grid----- */
 
 .content {
-  min-height: 100vh;
   display: grid;
-
   grid-template-areas:
     "wp wedding wine"
-    "atmosphere accom taps";
+    "atmosphere accom blank";
+  grid-template-rows: 48vh 48vh;
+  grid-template-columns: 33% 33% 33%;
 }
 
+.content > div {
+  color: white;
+}
+.bg-blur {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+}
+.head {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.disc {
+  font-size: 2em;
+  text-transform: capitalize;
+}
+.btn {
+  text-transform: uppercase;
+  padding: 10px 30px;
+  background-color: rgba(0, 0, 0, 0.007);
+  color: white;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
 .winepairing {
   grid-area: wp;
-  background-image: url(./Assets/Grid/wine\ pairing.jpg);
-
+  background: url(./Assets/Grid/wine\ pairing.jpg) no-repeat center;
   background-size: cover;
-  color: white;
 }
 .wedding {
   grid-area: wedding;
+  background-image: url(./Assets/Grid/wedding.jpg);
+  background-size: cover;
 }
 .wine {
   grid-area: wine;
+  background-image: url(./Assets/Grid/wine.jpg);
+  background-size: cover;
 }
 .atmosphere {
   grid-area: atmosphere;
+  background-image: url(./Assets/Grid/atmosphere.jpg);
+  background-size: cover;
 }
 .accomodation {
   grid-area: accom;
+  background-image: url(./Assets/Grid/accom.jpg);
+  background-size: cover;
 }
-.taps {
-  grid-area: taps;
+.blank {
+  grid-area: blank;
+  color: black !important;
+  padding: 2em;
+  align-self: center;
+}
+.blank > a {
+  font-size: 2em;
+  color: black;
+}
+.blank a:hover {
+  color: rgb(209, 127, 127);
+  transform: scale(2);
+  /* -----yaha mero transform bhayena---- */
+}
+/* ---------subscription form section */
+.subs {
+  display: flex;
+  align-items: center;
+  padding: 32px 0;
+  flex-direction: column;
+  background: black;
+  color: white;
+}
+.subs input {
+  padding: 10px;
+}
+.footer {
+  background: black;
+  color: white;
+  padding: 5px;
+  text-align: center;
+}
+
+@media (width < 992px) {
+  .hero-section video {
+    height: 90vh;
+  }
+}
+@media (width <600px) {
+  .section1 {
+    flex-direction: column;
+  }
+  .picture1 {
+    width: 100%;
+    height: 40vh;
+  }
 }
